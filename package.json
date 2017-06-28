@@ -22,8 +22,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "font-awesome": "^4.5.0",
-    "jquery": "^2.2.2",
-    "jquery.scrollto": "^2.1.2",
     "node-sass": "^3.4.2",
     "postcss-loader": "^0.10.1",
     "sass-loader": "^3.2.0",
@@ -34,6 +32,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "redux": "^3.7.1",
     "redux-devtools": "^3.4.0",
     "redux-devtools-extension": "^2.13.2"
   }

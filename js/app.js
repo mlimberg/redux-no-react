@@ -1,6 +1,5 @@
 import '../css/reset.scss'
 import '../css/app.scss';
-import $ from "jquery";
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import 'waypoints';
 import 'scrollTo';
@@ -17,7 +16,6 @@ window.addEventListener('keydown', (e) => {
   if (ideaInput.value && e.keyCode === 13) {
     handleSubmit()
   }
-
 })
 
 ideaInput.addEventListener('keyup', () => {
