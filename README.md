@@ -1,6 +1,6 @@
-# Simple CRUD (idea box)
+# Simple CRUD App 
 
-Built with redux and NO react
+A basic Idea Box app built with vanilla JS and redux (and NO react)
 
 # Webpack Boilerplate
 
