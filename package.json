@@ -32,5 +32,9 @@
     "waypoints": "^4.0.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "redux-devtools": "^3.4.0",
+    "redux-devtools-extension": "^2.13.2"
   }
 }

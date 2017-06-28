@@ -4,7 +4,8 @@ var autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: [
-        './js/app.js'
+        // './js/app.js'
+        './js/index.js'
     ],
     module: {
         loaders: [{

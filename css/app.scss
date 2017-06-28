@@ -1,69 +1,108 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/font-awesome/css/font-awesome.min.css";
-@import "../node_modules/animate.css/animate.min.css";
+// @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// @import "../node_modules/font-awesome/css/font-awesome.min.css";
+// @import "../node_modules/animate.css/animate.min.css";
 @import "color";
 @import "carousel";
 
-/* EXAMPLE CSS STARTS */
-.jumbotron {
-    margin-bottom: 0;
+$sky: #CAEBF2;
+$carbon: #A9A9A9;
+$watermelon: #ff3b3f;
+$neutral: #efefef;
+
+$card-background: #fff;
+
+.header {
+  width: 100%;
+  height: 20vh;
+  background-color: $sky;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
-#marketing {
-    padding-top: 60px;
-    .col-lg-4 {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    h2 {
-        font-weight: normal;
-    }
-    .col-lg-4 p {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
+.logo {
+  font-size: 2.3em;
 }
 
-.featurette-divider {
-    margin: 80px 0;
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -1px;
+body {
+  font-family: sans-serif;
+  background-color: $neutral;
 }
 
-#contact-us .jumbotron {
-    background-color: #ffffff;
-    p {
-        &:not(:first-of-type) {
-            font-size: 18px;
-        }
-    }
+#idea-list {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  align-items: center;
+  margin: auto;
 }
 
-.footer {
-    padding: 40px 0;
-    color: #999;
-    text-align: center;
-    background-color: #f8f8f8;
-    border-top: 1px solid #e7e7e7;
-    p:last-child {
-        margin-bottom: 0;
-    }
+.idea-card {
+  position: relative;
+  padding: 10px;
+  width: 25%;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid $sky;
+  box-shadow: 2px 2px 4px rgba(13, 13, 13, .3);
+  min-height: 30px;
+  word-wrap: break-word;
+  background-color: $card-background;
 }
 
-@media (min-width: 768px) {
-    .featurette-heading {
-        font-size: 50px;
-    }
+button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  background-color: $carbon;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(24, 45, 24, .5);
+    background-color: yellow;
+  }
+  &:disabled, &:disabled:hover {
+    cursor: not-allowed;
+    background-color: $carbon;
+    box-shadow: none;
+  }
 }
 
-@media (min-width: 992px) {
-    .featurette-heading {
-        margin-top: 120px;
-    }
+input {
+  outline: none;
+  width: 65%;
 }
 
-/* EXAMPLE CSS ENDS */
+#add-idea-btn {
+  margin-left: 5px;
+  min-width: 80px;
+}
+
+h3 {
+  margin: 5px;
+  width: 85%;
+  overflow: scroll;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 5px;
+  top: 25%;
+  background-color: $card-background;
+  &:hover {
+    color: red;
+    background-color: $card-background;
+    box-shadow: none;
+  }
+}
