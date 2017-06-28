@@ -1,4 +1,5 @@
 import Idea from './Idea';
+import { addIdea } from '../actions';
 
 export default class Form {
   constructor(store) {
@@ -20,11 +21,11 @@ export default class Form {
   }
 
   handleSubmit() {
-    const { ideaInput, addIdea, clearInput } = this
+    const { ideaInput } = this
     const idea = ideaInput.value
 
-    addIdea(idea)
-    clearInput(ideaInput)
+    this.addIdea(idea)
+    this.clearInput(ideaInput)
   }
 
   clearInput(element) {
@@ -33,8 +34,8 @@ export default class Form {
 
   addIdea(val) {
     const idea = new Idea(val)
-    console.log(idea);
-    // ideas.push(idea)
+
+    return this.store.dispatch(addIdea(idea))
     // updateIdeas()
   }
 

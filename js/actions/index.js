@@ -1,8 +1,8 @@
-const ADD_TODO = 'ADD_TODO'
+const ADD_IDEA = 'ADD_IDEA'
 
-export function addTodo(text) {
+export function addIdea(idea) {
   return {
-    type: ADD_TODO,
-    text
+    type: ADD_IDEA,
+    idea
   }
 }

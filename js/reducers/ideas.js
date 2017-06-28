@@ -1,7 +1,10 @@
 const ideas = (state = [], action) => {
   switch(action.type) {
     case 'ADD_IDEA':
-      console.log('add!');
+      const newState = state.slice()
+      newState.push(action.idea)
+      state = newState
+      return state
     case 'DELETE_IDEA':
       console.log('delete!');
     default:
