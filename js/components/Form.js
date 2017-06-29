@@ -1,11 +1,14 @@
 import Idea from './Idea';
 import { addIdea } from '../actions';
+import IdeaList from './IdeaList';
 
 export default class Form {
   constructor(store) {
     this.store = store
     this.addIdeaButton = document.getElementById('add-idea-btn')
     this.ideaInput = document.getElementById('idea-input')
+
+    console.log(this.store);
   }
 
   addEvents() {

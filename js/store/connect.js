@@ -1,3 +1,3 @@
-export function getItemList(store) {
-  return store.getState().items.all
+export function getIdeas(store) {
+  return store.getState().ideas
 }
