@@ -39,7 +39,6 @@ export default class Form {
     const idea = new Idea(val)
 
     return this.store.dispatch(addIdea(idea))
-    // updateIdeas()
   }
 
   toggleButton() {
@@ -49,6 +48,4 @@ export default class Form {
       this.addIdeaButton.setAttribute('disabled', true)
     }
   }
-
-
 }

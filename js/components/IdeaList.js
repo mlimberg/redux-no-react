@@ -1,4 +1,5 @@
 import { getIdeas } from '../store';
+import { deleteIdea } from '../actions';
 import { buildIdeaNode } from './helpers'
 
 export default class IdeaList {
@@ -27,8 +28,12 @@ export default class IdeaList {
     this.addDeleteEvent(idea)
   }
 
-  addDeleteEvent() {
-    console.log('delete event added!');
+  addDeleteEvent(idea) {
+    const nodeToDelete = document.getElementById(`delete ${idea.id}`)
+
+    nodeToDelete.addEventListener('click', () => {
+      this.store.dispatch(deleteIdea(idea.id))
+    })
   }
 
   init() {

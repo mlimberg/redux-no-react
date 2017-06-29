@@ -6,7 +6,9 @@ const ideas = (state = [], action) => {
       state = newState
       return state
     case 'DELETE_IDEA':
-      console.log('delete!');
+      const filteredIdeas = state.filter(idea => idea.id !== action.id)
+      state = filteredIdeas
+      return state;
     default:
       return state;
   }
