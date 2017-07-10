@@ -1,5 +1,5 @@
 import Idea from './Idea';
-import { addIdea } from '../actions';
+import { addIdea, updateAllIdeas } from '../actions';
 import IdeaList from './IdeaList';
 
 export default class Form {
@@ -7,8 +7,6 @@ export default class Form {
     this.store = store
     this.addIdeaButton = document.getElementById('add-idea-btn')
     this.ideaInput = document.getElementById('idea-input')
-
-    console.log(this.store);
   }
 
   addEvents() {
@@ -25,7 +23,8 @@ export default class Form {
 
   handleSubmit() {
     const { ideaInput } = this
-    const idea = ideaInput.value
+    const val = ideaInput.value
+    const idea = new Idea(val)
 
     this.addIdea(idea)
     this.clearInput(ideaInput)
@@ -35,9 +34,7 @@ export default class Form {
     element.value = ''
   }
 
-  addIdea(val) {
-    const idea = new Idea(val)
-
+  addIdea(idea) {
     return this.store.dispatch(addIdea(idea))
   }
 
@@ -47,5 +44,11 @@ export default class Form {
     } else {
       this.addIdeaButton.setAttribute('disabled', true)
     }
+  }
+
+  getIdeasFromStorage() {
+    const ideas = JSON.parse(localStorage.getItem('ideaBox-ideas'))
+
+    this.store.dispatch(updateAllIdeas(ideas))
   }
 }

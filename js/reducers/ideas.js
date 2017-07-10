@@ -1,3 +1,5 @@
+
+
 const ideas = (state = [], action) => {
   switch(action.type) {
     case 'ADD_IDEA':
@@ -8,6 +10,9 @@ const ideas = (state = [], action) => {
     case 'DELETE_IDEA':
       const filteredIdeas = state.filter(idea => idea.id !== action.id)
       state = filteredIdeas
+      return state;
+    case 'UPDATE_ALL':
+      state = action.ideas
       return state;
     default:
       return state;

@@ -1,9 +1,9 @@
-export const buildIdeaNode = (idea) => {
+export const buildIdeaNode = idea => {
   const newDiv = document.createElement('div')
-  const newTitle = document.createElement('h3', { contenteditable: true })
+  const newTitle = document.createElement('h3')
   const newButton = document.createElement('button')
   newTitle.append(idea.title)
-  newTitle.contenteditable = true;
+  newTitle.contentEditable = 'true';
   newButton.append('X')
   newButton.id = `delete ${idea.id}`
   newButton.className = 'delete-btn'

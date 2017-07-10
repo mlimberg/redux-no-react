@@ -11,3 +11,4 @@ const ideaList = new IdeaList(store)
 
 form.addEvents()
 ideaList.init()
+form.getIdeasFromStorage()
